@@ -1037,6 +1037,7 @@ a {
 	background-color: #fff;
 	position: absolute;
 	content: "";
+	transition: 0.25s ease-in-out;
 }
 
 .hamburgerLines {
@@ -1072,6 +1073,7 @@ a {
 	left: 0;
 	top: 0;
 	transform-origin: center;
+	transition: 0.25s ease-in-out;
 }
 
 .reveal .hamburgerLines:before {
@@ -1079,6 +1081,7 @@ a {
 	left: 0;
 	top: 0;
 	transform-origin: center;
+	transition: 0.25s ease-in-out;
 }
 
 #section1 {
