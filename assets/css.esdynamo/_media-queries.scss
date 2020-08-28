@@ -1,0 +1,16 @@
+@media (min-width: 75em) {
+	.sectionTitle {
+		top: 60px;
+	}
+}
+@media (max-width: 74em) {
+	.contentContainer {
+		padding: 4em;
+	}
+}
+@media (min-width: 1920px) {
+	.sectionTitle {
+		top: 110px;
+		font-size: 14em;
+	}
+}

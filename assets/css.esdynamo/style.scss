@@ -1,6 +1,9 @@
 @import "_reset.scss";
 @import "_flexboxgrid.min.scss";
 @import "_safari.scss";
+@import "_images.scss";
+@import "_media-queries.scss";
+
 // VARIABLES
 $brandColor: #6e0408;
 
@@ -167,9 +170,24 @@ a {
 	transition: 0.25s ease-in-out;
 }
 
+// HORIZONTAL PATHWAYS
+.roadway-sec {
+	background-color: $brandColor;
+	height: 17px;
+	position: absolute;
+	bottom: 5px;
+	left: 3rem;
+	z-index: -1;
+}
+
+// RELATIVE POSITIONING
+.relativePositioning {
+	position: relative;
+}
+
 // SECTION BACKGROUNDS
 #section1 {
-	background-image: url(../img/students-sitting-on-top-of-SMU-sign-infront-of-mcnally-main-wide.jpg);
+	/*background-image: url(../img/students-sitting-on-top-of-SMU-sign-infront-of-mcnally-main-wide.jpg);*/
 	background-size: 50%;
 	background-position: center right;
 	background-repeat: no-repeat;
@@ -189,6 +207,7 @@ body {
 h1 {
   font-family: "HelveticaNeue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-size: 112px;
+  line-height: 1.2em;
   margin: 0;
 }
 .wrapper {
@@ -238,12 +257,15 @@ section {
 	width: 100%;
 }
 .sectionTitle {
-	top: -5px;
+	/*top: -5px;
+	left: 30px;*/
+	left: -10px;
+    font-size: 120px;
 	position: relative;
-	left: 30px;
 	letter-spacing: -5.5px;
 	color: $brandColor;
 	font-weight: bold;
+	line-height: 1;
 }
 .sectionTitle.right {
 	right: 30px;
@@ -259,10 +281,15 @@ section {
 .headerContainer .fa.fa-angle-down {
 	color: #000;
 }
+.headerContainer .nextToggle {
+	background-color: transparent;
+	bottom: 10px;
+}
 .nextToggle {
 	position: absolute;
-	bottom: 10px;
-	right: 20px;
+	bottom: -40px;
+	right: 25px;
+	background-color: #fff;
 	z-index: 1;
 }
 .fadeOut .firstSection {
@@ -300,6 +327,9 @@ section {
 .moveLine6 .percentage {
 	left: 245px;
 }
+.percentage {
+	left: 35px!important;
+}
 [data-scrollPercentage] .percentage {
 	display: inline-block;
 	background-color: $brandColor;
@@ -312,13 +342,18 @@ section {
 }
 .innerContent {
 	background-color: #fff;
-	padding: 1em 0;
+	position: relative;
+	padding-right: 1em;
+}
+.blurb {
+	margin-bottom: 4em;
+	max-width: 500px;
 }
 .splashNav {
 	color: #666;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 4em;
 	align-self: flex-end;
 	flex-basis: 100%;
 	font-weight: bold;
@@ -415,17 +450,33 @@ header::after {
 	margin-right: 0;
 }*/
 .contentContainer {
-	margin-left: 35px;
+	/*margin-left: 35px;
 	height: calc(100vh - 129px);
 	position: relative;
-    z-index: 99;
+    z-index: 99;*/
+	padding-left: 4em;
+	padding-right: 4em;
+	position: relative;
+}
+.sectionBottomPadding {
+	padding-bottom: 4em;
 }
 .contentContainer > .row {
 	height: 100%;
-	align-items: center;
+}
+.row.gutter_space {
+	margin-left: -3rem;
+	margin-right: -3rem;
+}
+.row.gutter_space > div {
+	padding-left: 3rem;
+	padding-right: 3rem;
 }
 .arrowRight {
 	fill: $brandColor;
+}
+.mediaButton {
+	margin-bottom: 2em;
 }
 .mediaButton a {
 	position: relative;

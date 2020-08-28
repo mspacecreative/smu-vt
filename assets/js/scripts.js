@@ -85,6 +85,33 @@
 	$(window).scroll(function(){
 		$("header").css("opacity", 1 - $(window).scrollTop() / viewPortHeight);
 	});
+	
+	var scroll_pos = 0;
+	section1Height = $('#section1').height() - 50,
+	section2Height = $('#section2').height() - 50;
+	//section2Height = $('#section2').height();
+
+	$(window).scroll(function() {
+	    scroll_pos = $(this).scrollTop();
+	    if ( $(window).scrollTop() < section1Height || $(window).scrollTop() < section2Height ) {
+	        scroll_pos = 0-0*scroll_pos;
+	
+	    }
+	    else {
+	        scroll_pos = 0+0.45*scroll_pos;
+	    }
+		$(".roadway-sec-1").width(scroll_pos);
+		
+		if ( $(window).scrollTop() < section2Height ) {
+	        scroll_pos = 0-0*scroll_pos;
+	
+	    }
+	    else {
+	        scroll_pos = 0+0.60*scroll_pos;
+	    }
+		$(".roadway-sec-2").width(scroll_pos);
+	
+	});
 
 })(jQuery);
 
